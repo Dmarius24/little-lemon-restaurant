@@ -3,7 +3,7 @@ import './CSS/Header.css';
 const Header = () => {
   return (
     <>
-    <header className="header">
+    <header>
       <hgroup>
         <h1>Little Lemon</h1>
         <h3>Chicago</h3>
@@ -11,7 +11,7 @@ const Header = () => {
       <p>We are a family owned Mediterranean restaurant, 
         focused on traditional recipes served with a modern twist.</p>
       <button>Reserve a Table</button>
-      <img src="F:/FRONT-END-DEVELOPER/META-Front-End/Front-End Dev Capstone/project/little-lemon/src/resources/restaurantfood.jpg" alt="restaurant food"/>
+      <img className="hero" src="F:/FRONT-END-DEVELOPER/META-Front-End/Front-End Dev Capstone/project/little-lemon/src/resources/restaurant-food.jpg" alt="restaurant food"/>
     </header>
     </>
   );

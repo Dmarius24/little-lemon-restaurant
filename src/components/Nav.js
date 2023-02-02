@@ -6,21 +6,25 @@ import Menu from "./Pages/Menu"
 import Reservations from "./Pages/Reservations"
 import Order from "./Pages/Order"
 import Login from "./Pages/Login"
+
 import "./CSS/Nav.css";
+import Logo1 from "../resources/Logo1.svg";
 
 const Nav = () => {
   return (
     <>
     <Router>
       <header className="header">
-        <img src="../resources/Logo.svg" alt="logo" />
+        <img className="logo" src={Logo1} alt="logo" />
         <nav className="navigation">
-            <Link to="/">Home</Link>
-            <Link to="/Pages/About">About</Link>
-            <Link to="/Pages/Menu">Menu</Link>
-            <Link to="/Pages/Reservations">Reservations</Link>
-            <Link to="/Pages/Order">Order Online</Link>
-            <Link to="/Pages/Login">Login</Link>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/Pages/About">About</Link></li>
+            <li><Link to="/Pages/Menu">Menu</Link></li>
+            <li><Link to="/Pages/Reservations">Reservations</Link></li>
+            <li><Link to="/Pages/Order">Order Online</Link></li>
+            <li><Link to="/Pages/Login">Login</Link></li>
+          </ul>
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />

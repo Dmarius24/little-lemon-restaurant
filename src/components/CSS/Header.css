@@ -1,3 +1,32 @@
-.header {
-    background-color: black;
+* {
+    box-sizing: border-box;
+}
+
+header {
+    margin: 0 15%;
+    width: 80%;
+    height: 42vh;
+    background-color: #495E57;
+
+    display: inline-grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+}
+
+hgroup {
+    grid-row: 1;
+    grid-column: 1 / 2;
+
+}
+p {
+    grid-row: 2;
+    grid-column: 1 / 2;
+}
+
+button {
+    grid-row: 3;
+    grid-column: 1 / 2;
+}
+hero {
+    grid-column: 3 / 4;
 }
