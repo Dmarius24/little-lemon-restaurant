@@ -1,17 +1,21 @@
 import React from 'react'
 import './CSS/Header.css';
+import hero from "../resources/hero.jpg"
+
 const Header = () => {
   return (
     <>
-    <header>
-      <hgroup>
-        <h1>Little Lemon</h1>
-        <h3>Chicago</h3>
-      </hgroup>
-      <p>We are a family owned Mediterranean restaurant, 
-        focused on traditional recipes served with a modern twist.</p>
-      <button>Reserve a Table</button>
-      <img className="hero" src="F:/FRONT-END-DEVELOPER/META-Front-End/Front-End Dev Capstone/project/little-lemon/src/resources/restaurant-food.jpg" alt="restaurant food"/>
+    <header className="hero">
+      <section className="hero-section">
+        <hgroup className="titles">
+          <h1 className="title">Little Lemon</h1>
+          <h3 className="sub-title-hero">Chicago</h3>
+        </hgroup>
+        <p className="hero-description">We are a family owned Mediterranean restaurant, 
+          focused on traditional recipes served with a modern twist.</p>
+        <button className="yellow">Reserve a Table</button>
+        <img className="hero-image" src={hero} alt="restaurant food"/>
+      </section>
     </header>
     </>
   );

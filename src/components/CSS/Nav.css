@@ -5,18 +5,19 @@
     font-family: 'Karla';
 }
 
-.header {
+
+.nav-menu {
     background-color: #FFFFFF;
-    margin: 0 15%;
-    width: 100%;
-    height: 20vh;
+    height: 12vh;
     display: inline-grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-columns: 0.8fr 1fr 1fr 1fr 0.5fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    ". logo nav nav ."
 }
 
 .navigation {
-    grid-column: 2 / 4;
+    grid-area: nav;
     align-items: flex-end;
 }
 
@@ -24,6 +25,7 @@
     display: inline-grid;
     margin: 24px;
     font-family: 'Karla';
+
 }
 
 .navigation li a {
@@ -33,9 +35,7 @@
 
 .logo {
     margin-top: 15px;
-    align-items: flex-start;
+    grid-area: logo;
     width: 148px;
     height: auto;
-    align-self: start;
-    justify-self: start;
 }

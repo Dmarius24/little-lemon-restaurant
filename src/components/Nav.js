@@ -14,7 +14,7 @@ const Nav = () => {
   return (
     <>
     <Router>
-      <header className="header">
+      <header className="nav-menu">
         <img className="logo" src={Logo1} alt="logo" />
         <nav className="navigation">
           <ul>

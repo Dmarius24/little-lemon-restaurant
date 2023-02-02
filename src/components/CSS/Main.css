@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;500&family=Markazi+Text:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.highlights {
+    margin-top: 80px;
+    height: 100vh;
+}
+
+
+
+.cards {
+    display: inline-grid;
+    grid-template-columns: 0.8fr 1fr 1fr 1fr 0.8fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    ". sub-title sub-title button ."
+    ".    nr1       nr2     nr3   ."
+}
+
+.nr1 {
+    grid-area: nr1;
+}
+
+.nr2 {
+    grid-area: nr2;
+}
+
+.nr3 {
+    grid-area: nr3;
+}
+
+.card {
+    background-color: #EDEFEE;
+    border-radius: 16px;
+    margin: 70px 35px 10px 0px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.image {
+    justify-content: center;
+    align-self: stretch;
+}
+
+.sub-title {
+    font-family: 'Karla';
+    font-size: 53px;
+    color: #000000;
+
+    grid-area: sub-title;
+}
+
+.money {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    margin: 20px 0;
+}
+
+.yellow-menu {
+    height: 60px;
+    width: 200px;
+    margin-left: 93px;
+    border-radius: 16px;
+    font-family: 'Karla';
+    font-size: 21px;
+    font-weight: bold;
+    background-color: #F4CE14;
+    border: 1px solid #F4CE14;
+    color: #000000;
+
+    grid-area: button;
+}
+
+
+.card-title {
+    font-size: 24px;
+    font-family: 'Markazi Text';
+    font-weight: bold;
+}
+
+.price {
+    font-family: 'Karla';
+    font-size: 21px;
+    color: #EE9722;
+    align-self: end;
+}
+
+.card-description {
+    font-family: 'Karla';
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 20px 20px 20px;
+}
+
+.order-button {
+    margin: 0 0 30px 20px;
+    background-color: transparent;
+    border: transparent;
+    font-family: 'Karla';
+    font-weight: bold;
+    font-size: 16px;
+    align-self: flex-start;
+}
+
+.icon {
+    height: 20px;
+    width: 20px;
+}
