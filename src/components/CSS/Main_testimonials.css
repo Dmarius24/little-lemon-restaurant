@@ -8,12 +8,14 @@
 }
 
 
-.sub-title-hero {
+.sub-title-hero1 {
+    font-size: 53px;
+    color: #FFFFFF;
     font-weight: bold;
     font-style: 'Markazi Text';
 }
 
-.container {
+.container1 {
     margin-top: 70px;
     display: flex;
     justify-content: center;

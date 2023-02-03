@@ -10,8 +10,8 @@ const Testimonials = () => {
     <>
     <main className="testimonials">
       <article className="reviews">
-          <h3 className="sub-title-hero">Testimonials</h3>
-          <section className="container">
+          <h3 className="sub-title-hero1">Testimonials</h3>
+          <section className="container1">
             <article className="review">
               <h5 className="rating-title">Rating</h5>
               <figure className="person-review">
