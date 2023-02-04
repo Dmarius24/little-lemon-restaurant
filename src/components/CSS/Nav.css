@@ -5,12 +5,12 @@
     font-family: 'Karla';
 }
 
-
+@media (min-width: 768px) {
 .nav-menu {
     background-color: #FFFFFF;
     height: 12vh;
-    display: inline-grid;
-    grid-template-columns: 0.8fr 1fr 1fr 1fr 0.5fr;
+    display: grid;
+    grid-template-columns: 0.8fr 1fr 1fr 1fr 0.8fr;
     grid-template-rows: auto;
     grid-template-areas: 
     ". logo nav nav ."
@@ -33,9 +33,46 @@
     text-decoration: none;
 }
 
-.logo {
+.logo-main {
     margin-top: 15px;
     grid-area: logo;
     width: 148px;
     height: auto;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+}
+
+/* Mobile design */
+
+@media (min-width: 0px) and (max-width: 768px) {
+    .nav-menu {
+        height: 7vh;
+    }
+    .logo-main {
+        display: none;
+    }
+
+    .logo {
+        max-height: 30px;
+        max-width: 150px;
+        margin-top: 15px;
+    }
+    .mobile-nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .mobile-options li {
+        display: inline-block;
+        margin: 0 24px;
+        padding-top: 12px;
+    }
+    .navigation {
+        visibility: hidden;
+    }
 }

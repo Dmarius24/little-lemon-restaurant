@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+@media (min-width: 768px) {
+
 .hero {
         background-color: #495E57;
 }
@@ -73,4 +75,61 @@
     border-radius: 16px;
     place-self: end;
     grid-area: image;
+}
+
+}
+
+/* Mobile Design */
+@media (min-width: 0px) and (max-width: 767px) {
+    .hero {
+        background-color: #495E57;
+    }
+
+    .hero-section {
+        padding: 15px 30px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+    }
+    .titles {
+        font-family: 'Markazi Text';
+        align-self: flex-start;
+    }
+    .title {
+        font-size: 53px;
+        color: #F4CE14;
+    }
+    .sub-title-hero {
+        font-size: 40px;
+        color: #FFFFFF;
+    }
+    .hero-description {
+        width: 50%;
+        font-family: 'Karla';
+        font-size: 16px;
+        color: #FFFFFF;
+    }
+    .yellow {
+        height: 50px;
+        width: 150px;
+        border-radius: 16px;
+        font-family: 'Karla';
+        font-size: 16px;
+        font-weight: bold;
+        background-color: #F4CE14;
+        border: 1px solid #F4CE14;
+        color: #000000;
+        margin-bottom: 10px;
+    }
+    .hero-image {
+        max-height: 260px;
+        max-width: 280px;
+        min-width: auto;
+        min-height: auto;
+        border-radius: 16px;
+        margin-top: 10px;
+        margin-left: 40px;
+    }
 }

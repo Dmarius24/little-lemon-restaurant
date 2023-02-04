@@ -4,18 +4,17 @@
     box-sizing: border-box;
 }
 
+@media (min-width: 768px) {
 .highlights {
     margin-top: 80px;
     height: 100vh;
 }
 
-
-
 .cards {
     display: inline-grid;
     grid-template-columns: 0.8fr 1fr 1fr 1fr 0.8fr;
     grid-template-rows: auto;
-    grid-template-areas: 
+    grid-template-areas:
     ". sub-title sub-title button ."
     ".    nr1       nr2     nr3   ."
 }
@@ -48,7 +47,7 @@
 }
 
 .sub-title {
-    font-family: 'Karla';
+    font-family: 'Markazi Text';
     font-size: 53px;
     color: #000000;
 
@@ -76,7 +75,6 @@
 
     grid-area: button;
 }
-
 
 .card-title {
     font-size: 24px;
@@ -111,4 +109,90 @@
 .icon {
     height: 20px;
     width: 20px;
+}
+
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+    .highlights {
+        margin-top: 30px;
+        height: 145vh;
+    }
+    .cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .sub-title {
+        font-family: 'Markazi Text';
+        font-size: 30px;
+        color: #000000;
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    .yellow-menu {
+        height: 50px;
+        width: 150px;
+        border-radius: 16px;
+        font-family: 'Karla';
+        font-size: 16px;
+        font-weight: bold;
+        background-color: #F4CE14;
+        border: 1px solid #F4CE14;
+        color: #000000;
+    }
+    .card {
+        background-color: #EDEFEE;
+        width: 270px;
+        border-radius: 16px;
+        margin: 30px 10px 0 0;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .image {
+        align-self: center;
+        max-height: 260px;
+        max-width: 280px;
+        min-width: auto;
+        min-height: auto;
+        border-radius: 16px 16px 0 0;
+        border: 1px solid #000000;
+    }
+    .money {
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        margin: 15px 0;
+    }
+    .card-title {
+        font-size: 20px;
+        font-family: 'Markazi Text';
+        font-weight: bold;
+    }
+    .price {
+        font-family: 'Karla';
+        font-size: 20px;
+        color: #EE9722;
+        align-self: end;
+        text-decoration: underline 1px;
+    }
+    .card-description {
+        font-family: 'Karla';
+        font-size: 16px;
+        line-height: 1em;
+        margin: 0 20px 20px 20px;
+    }
+    .order-button {
+        margin: 0 0 25px 20px;
+        background-color: transparent;
+        border: transparent;
+        font-family: 'Karla';
+        font-weight: bold;
+        font-size: 16px;
+        align-self: flex-start;
+        text-decoration: underline 2px;
+    }
 }

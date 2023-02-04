@@ -6,16 +6,26 @@ import Menu from "./Pages/Menu"
 import Reservations from "./Pages/Reservations"
 import Order from "./Pages/Order"
 import Login from "./Pages/Login"
-
 import "./CSS/Nav.css";
 import Logo1 from "../resources/Logo1.svg";
+import { MdHome, MdOutlineRemoveRedEye, MdOutlineShoppingBasket } from 'react-icons/md';
 
 const Nav = () => {
   return (
     <>
     <Router>
       <header className="nav-menu">
-        <img className="logo" src={Logo1} alt="logo" />
+      <img className="logo-main" src={Logo1} alt="logo" />
+        <section className="mobile-nav">
+          <img className="logo" src={Logo1} alt="logo" />
+          <nav className="mobile-options">
+            <ul>
+              <li><MdHome /></li>
+              <li><MdOutlineRemoveRedEye /></li>
+              <li><MdOutlineShoppingBasket /></li>
+            </ul>
+          </nav>
+        </section>
         <nav className="navigation">
           <ul>
             <li><Link to="/">Home</Link></li>

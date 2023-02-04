@@ -6,6 +6,8 @@
     padding: 0;
 }
 
+@media (min-width: 768px) {
+
 .about-section {
     height: auto;
 }
@@ -62,3 +64,54 @@
     z-index: 1;
 }
 
+}
+
+@media (min-width: 0px) and (max-width:767px) {
+    .about-section {
+        height: 60vh;
+    }
+    .container2 {
+        margin-top: 15px;
+        padding: 25px 20px;
+
+        display: flex;
+        flex-direction: column;
+    }
+    .titles-us {
+        justify-content: flex-start;
+    }
+    .title {
+        font-size: 53px;
+    }
+    .sub-title-location {
+        font-family: 'Karla';
+        font-size: 40px;
+        color: #000000;
+    }
+    .description-us {
+        margin: 20px 0;
+        font-family: 'Karla';
+        font-size: 20px;
+        line-height: 1em;
+
+    }
+    .our-images {
+        margin-right: 11px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap-reverse;
+    }
+    .about-us-image {
+        max-height: 230px;
+        max-width: 240px;
+        min-width: auto;
+        min-height: auto;
+        border-radius: 16px;
+        border: 2px solid #000000;
+    }
+    .us1 {
+        margin-top: 40px;
+        transform: translate(60px, 0px);
+    }
+
+}

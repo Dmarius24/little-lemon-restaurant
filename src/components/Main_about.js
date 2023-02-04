@@ -19,10 +19,10 @@ const Main_about = () => {
             </p>
             <section className="our-images">
               <figure className="us1">
-                <img src={Mario2} className="about-us-image" alt="Mario and Adrian cooking for clients" />
+                <img src={Mario1} className="about-us-image" alt="Mario and Adrian cooking for clients" />
               </figure>
               <figure className="us2">
-                <img src={Mario1} className="about-us-image" alt="Mario and Adrian preparing the dishes" />
+                <img src={Mario2} className="about-us-image" alt="Mario and Adrian preparing the dishes" />
               </figure>
             </section>
       </article>
