@@ -5,12 +5,20 @@
     font-family: 'Karla';
 }
 
+.navigation li:hover {
+    font-weight: bold;
+    color: #495E57;
+    text-decoration: underline #2f4f4f ;
+    text-shadow: -1px -2px 0 #F4CE14, 2px -2px 0 #F4CE14, -2px 2px 0 #F4CE14, 2px 2px 0 #F4CE14;
+}
+
+
 @media (min-width: 768px) {
 .nav-menu {
     background-color: #FFFFFF;
     height: 12vh;
     display: grid;
-    grid-template-columns: 0.8fr 1fr 1fr 1fr 0.8fr;
+    grid-template-columns: 0.8fr 1fr 1.2fr 1fr 0.8fr;
     grid-template-rows: auto;
     grid-template-areas: 
     ". logo nav nav ."
@@ -23,7 +31,7 @@
 
 .navigation li  {
     display: inline-grid;
-    margin: 24px;
+    margin: 30px 26px;
     font-family: 'Karla';
 
 }
