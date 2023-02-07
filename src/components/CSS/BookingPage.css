@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;500&family=Markazi+Text:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+  /*  .hero {
+        display: none;
+    }
+    .highlights {
+        display: none;
+    }
+    .testimonials {
+        display: none;
+    }
+    .about-section {
+        display: none;
+    }
+*/
+    .form-style {
+        display: grid;
+        max-width: 200px; 
+        gap: 20px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+
+}

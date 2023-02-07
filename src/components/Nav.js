@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import {Routes, Route, Link } from "react-router-dom";
 import Home from "./Pages/Home"
 import About from "./Pages/About"
 import Menu from "./Pages/Menu"
@@ -8,23 +8,18 @@ import Order from "./Pages/Order"
 import Login from "./Pages/Login"
 import "./CSS/Nav.css";
 import Logo1 from "../resources/Logo1.svg";
-import { MdHome, MdOutlineRemoveRedEye, MdOutlineShoppingBasket } from 'react-icons/md';
-
+import hamburger from "../resources/hamburger-menu.svg";
+import basket from "../resources/Basket.svg"
 const Nav = () => {
   return (
     <>
-    <Router>
+
       <header className="nav-menu">
       <img className="logo-main" src={Logo1} alt="logo" />
         <section className="mobile-nav">
+          <img className="hamburger" src={hamburger} alt="menu" />
           <img className="logo" src={Logo1} alt="logo" />
-          <nav className="mobile-options">
-            <ul>
-              <li><MdHome /></li>
-              <li><MdOutlineRemoveRedEye /></li>
-              <li><MdOutlineShoppingBasket /></li>
-            </ul>
-          </nav>
+          <img className="basket" src={basket} alt="basket" />
         </section>
         <nav className="navigation">
           <ul>
@@ -38,14 +33,14 @@ const Nav = () => {
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Footer" element={<About />}></Route>
-          <Route path="/Main" element={<Menu />}></Route>
-          <Route path="/Main" element={<Reservations />}></Route>
-          <Route path="/Main" element={<Order />}></Route>
-          <Route path="/Header" element={<Login />}></Route>
+          <Route path="/Footer" element={<About />} />
+          <Route path="/Main" element={<Menu />} />
+          <Route path="/Reservations" element={<Reservations />} />
+          <Route path="/Main" element={<Order />} />
+          <Route path="/Header" element={<Login />} />
         </Routes>
       </header>
-    </Router>
+
     </>
   )
 }

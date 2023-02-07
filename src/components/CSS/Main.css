@@ -10,6 +10,10 @@
     height: 100vh;
 }
 
+.order-delivery {
+    display: none;
+}
+
 .cards {
     display: inline-grid;
     grid-template-columns: 0.8fr 1fr 1fr 1fr 0.8fr;
@@ -30,6 +34,8 @@
 .nr3 {
     grid-area: nr3;
 }
+
+
 
 .card {
     background-color: #EDEFEE;
@@ -115,62 +121,80 @@
 
 @media (min-width: 0px) and (max-width: 767px) {
     .highlights {
-        margin-top: 30px;
-        height: 145vh;
+        margin: 30px 0px;
+        height: auto;
     }
     .cards {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-end;
+        margin: 0px 10px;
     }
     .sub-title {
-        font-family: 'Markazi Text';
-        font-size: 30px;
-        color: #000000;
-        margin-top: 10px;
-        margin-left: 20px;
+        display: none;
     }
     .yellow-menu {
-        height: 50px;
-        width: 150px;
-        border-radius: 16px;
-        font-family: 'Karla';
-        font-size: 16px;
+        display: none;
+    }
+    .order-delivery {
+        display: flex;
+        flex-direction: column;
+        margin: 0px 10px;
+    }
+    .order-title {
+        text-transform: uppercase;
         font-weight: bold;
-        background-color: #F4CE14;
-        border: 1px solid #F4CE14;
-        color: #000000;
+        font-family: 'Karla';
+        font-size: 20px;
+        margin: 0px 0px 2px 5px;
+    }
+    .order-menu {
+        display: inline-block;
+    }
+    .order-menu ul {
+        display: flex;
+        margin: 10px 0px 0px 0px;
+    }
+    .order-menu li {
+        font-size: 16px;
+        font-family: 'Karla';
+        font-weight: bold;
+        margin: 0 3px;
+        padding: 8px 4px 8px 4px;
+        background-color: #EDEFEE;
+        border-radius: 16px;
     }
     .card {
         background-color: #EDEFEE;
-        width: 270px;
+        height: 200px;
+        width: auto;
         border-radius: 16px;
         margin: 30px 10px 0 0;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
     }
     .image {
-        align-self: center;
-        max-height: 260px;
-        max-width: 280px;
+        align-self: flex-end;
+        max-height: 120px;
+        max-width: 140px;
         min-width: auto;
         min-height: auto;
-        border-radius: 16px 16px 0 0;
+        border-radius: 16px;
         border: 1px solid #000000;
     }
     .money {
-        display: flex;
-        justify-content: space-around;
-        align-content: center;
-        margin: 15px 0;
+        justify-content: flex-end;
+        align-content: space-around;
+        margin: 30px 15px;
     }
     .card-title {
         font-size: 20px;
         font-family: 'Markazi Text';
         font-weight: bold;
+        align-self: flex-start;
     }
     .price {
         font-family: 'Karla';
@@ -183,16 +207,9 @@
         font-family: 'Karla';
         font-size: 16px;
         line-height: 1em;
-        margin: 0 20px 20px 20px;
+        margin: 10px 20px 20px 20px;
     }
     .order-button {
-        margin: 0 0 25px 20px;
-        background-color: transparent;
-        border: transparent;
-        font-family: 'Karla';
-        font-weight: bold;
-        font-size: 16px;
-        align-self: flex-start;
-        text-decoration: underline 2px;
+        display: none;
     }
 }

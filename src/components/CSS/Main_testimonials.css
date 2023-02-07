@@ -74,7 +74,7 @@
 @media (min-width: 0px) and (max-width:767px) {
     .testimonials {
         background-color: #495E57;
-        height: 104vh;
+        height: auto;
         text-align: center;
         padding: 50px;
     }

@@ -73,12 +73,15 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+        align-content: center;
     }
 
-    .mobile-options li {
+    .hamburger, .basket {
         display: inline-block;
-        margin: 0 24px;
-        padding-top: 12px;
+        padding-top: 5px;
+    }
+    .logo {
+        margin-bottom: 5px;
     }
     .navigation {
         visibility: hidden;

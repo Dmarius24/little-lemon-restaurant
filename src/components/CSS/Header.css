@@ -28,12 +28,12 @@ button:active {
     height: 52vh;
 
     display: inline-grid;
-    grid-template-columns: 0.8fr 1fr 0.8fr 1fr 0.8fr;
+    grid-template-columns: 0.8fr 1fr 1fr 1fr 0.8fr;
     grid-template-rows: auto;
     grid-template-areas: 
-    " titles      titles      . . image "
-    " description description . . image "
-    " button      .           . . image "
+    " titles       titles        titles         titles       image "
+    " description  description   description    description  image "
+    " button        button        button        button       image "
 }
 
 .titles {
@@ -55,17 +55,22 @@ button:active {
 }
 
 .hero-description {
-    margin-top: 15px;
-    margin-left: 93px;
+    margin: 15px 93px 0px 93px;
     font-family: 'Karla';
     font-size: 21px;
     color: #FFFFFF;
     line-height: 1.5em;
+
     grid-area: description;
 }
 
+.reserve-link {
+    align-self: flex-start;
+    grid-area: button;
+}
+
 .yellow {
-    height: 60px;
+    height: 40px;
     width: 200px;
     margin-top: 15px;
     margin-left: 93px;
@@ -76,8 +81,6 @@ button:active {
     background-color: #F4CE14;
     border: 1px solid #F4CE14;
     color: #000000;
-
-    grid-area: button;
 }
 .hero-image {
     max-height: 360px;
@@ -85,7 +88,7 @@ button:active {
     min-width: auto;
     min-height: auto;
     border-radius: 16px;
-    place-self: end;
+    place-self: start;
     grid-area: image;
 }
 
@@ -123,8 +126,9 @@ button:active {
         font-size: 16px;
         color: #FFFFFF;
     }
+
     .yellow {
-        height: 50px;
+        height: 35px;
         width: 150px;
         border-radius: 16px;
         font-family: 'Karla';

@@ -68,7 +68,7 @@
 
 @media (min-width: 0px) and (max-width:767px) {
     .about-section {
-        height: 60vh;
+        height: auto;
     }
     .container2 {
         margin-top: 15px;
