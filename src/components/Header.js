@@ -16,7 +16,7 @@ const Header = ({type}) => {
 
   return (
     <>
-    { !hidden ?
+    { !hidden ? 
     <header className="hero">
       <section className="hero-section">
         <hgroup className="titles">

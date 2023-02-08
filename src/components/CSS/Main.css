@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 @media (min-width: 768px) {
 .highlights {
     margin-top: 80px;

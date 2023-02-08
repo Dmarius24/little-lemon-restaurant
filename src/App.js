@@ -16,9 +16,9 @@ function App() {
         <Route path="/BookingPage" element={<BookingForm />} />
       </Routes>
         <Header />
-        <Main type="hide" />
-        <Testimonials type="hide" />
-        <About type="hide" />
+        <Main />
+        <Testimonials />
+        <About />
       <Footer />
     </>
   );

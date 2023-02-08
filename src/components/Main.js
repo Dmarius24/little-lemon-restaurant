@@ -5,7 +5,9 @@ import bruchetta from "../resources/bruchetta-1.jpg"
 import lemon from "../resources/lemon-dessert-1.jpg"
 import "./CSS/Main.css";
 
-const Main = () => {
+const Main = () => {  
+
+
   return (
     <>
       <main className="highlights">
@@ -60,7 +62,7 @@ const Main = () => {
             </section>
         </article>
       </main>
-    </>
+      </>
   );
 }
 

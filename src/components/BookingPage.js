@@ -1,31 +1,50 @@
-import React from 'react'
+import React, {useState} from 'react';
 import './CSS/BookingPage.css';
+import Reserve from './Forms/Reserve';
+import Customer from './Forms/Customer';
+import Payment from './Forms/Payment';
 
 
 const BookingForm = () => {
+  const [page, setPage] = useState(0);
+
+  const FormTitles = ["Find a table for your occasion", "Sign up", "Booking details"];
+  const FormButtons = ["Make Your reservation", "Continue", "Book"];
+
+  const PageDisplay = () => {
+    if (page === 0) {
+      return <Reserve />;
+    } else if (page === 1) {
+      return <Customer />;
+    } else {
+      return <Payment />;
+    }
+  }
+
   return (
     <>
-
     <form className="form-style">
-    <label for="res-date">Choose date</label>
-    <input type="date" id="res-date" />
-    <label for="res-time">Choose time</label>
-    <select id="res-time ">
-        <option>17:00</option>
-        <option>18:00</option>
-        <option>19:00</option>
-        <option>20:00</option>
-        <option>21:00</option>
-        <option>22:00</option>
-    </select>
-    <label for="guests">Number of guests</label>
-    <input type="number" placeholder="1" min="1" max="10" id="guests" />
-    <label for="occasion">Occasion</label>
-    <select id="occasion">
-        <option>Birthday</option>
-        <option>Anniversary</option>
-    </select>
-    <input type="submit" value="Make Your reservation" />
+      <h4>{FormTitles[page]}</h4>
+
+    <main className="form-content">
+      {PageDisplay()}
+    </main>
+            <input
+              type="submit"
+              value={FormButtons[page]}
+              className="input-design reserve"
+              disabled={page === FormTitles.length - 1}
+              onClick={(e) => {e.preventDefault();
+                            setPage((currPage) => currPage + 1);
+                          }} />
+            <input
+              type="submit"
+              value="Back"
+              className="input-design back"
+              disabled={page === 0}
+              onClick={(e) => {e.preventDefault();
+                            setPage((currPage) => currPage - 1);
+                          }} />
     </form>
     </>
     )
