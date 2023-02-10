@@ -2,28 +2,28 @@ import React, {useState} from 'react';
 import './CSS/BookingPage.css';
 import Reserve from './Forms/Reserve';
 import Customer from './Forms/Customer';
-import Payment from './Forms/Payment';
+import {useForm} from 'react-hook-form';
 
 
 const BookingForm = () => {
-  const [page, setPage] = useState(0);
 
-  const FormTitles = ["Find a table for your occasion", "Sign up", "Booking details"];
-  const FormButtons = ["Make Your reservation", "Continue", "Book"];
+  const [page, setPage] = useState(0); 
+
+  const FormTitles = ["Find a table for your occasion", "Sign up"];
+  const FormButtons = ["Make Your reservation", "Save"];
 
   const PageDisplay = () => {
     if (page === 0) {
       return <Reserve />;
     } else if (page === 1) {
       return <Customer />;
-    } else {
-      return <Payment />;
-    }
+    } 
   }
+
 
   return (
     <>
-    <form className="form-style">
+    <form className="form-style" onSubmit={PageDisplay}>
       <h4>{FormTitles[page]}</h4>
 
     <main className="form-content">

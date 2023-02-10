@@ -1,38 +1,13 @@
 import React, {useState} from 'react'
 import PhoneInput from 'react-phone-number-input';
-import 'react-phone-number-input/style.css'
-import { useFormik } from 'formik';
+import 'react-phone-number-input/style.css';
+
 import '../CSS/Customer.css';
 import icon from '../../resources/icon-eye.svg';
-
+import {useForm} from 'react-hook-form';
 const Customer = () => {
   // useState for phone number
   const [value, setValue] = useState()
-
-
-// Formik code for email
-  const validate = (values) => {
-    const errors = {}
-
-    if (!values.email) {
-      errors.email = 'Required'
-    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-      errors.email = 'Invalid email address'
-    }
-
-    return errors
-  }
-
-  const formik = useFormik({
-    initialValues: {
-      email: '',
-    },
-    validate,
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2))
-    },
-  })
-// End code for Formik email
 
 // useState for Password to allow it to be shown
   const [isShown, setIsSHown] = useState(false);
@@ -40,15 +15,21 @@ const Customer = () => {
   const togglePassword = () => {
     setIsSHown((isShown) => !isShown);
   };
+  // react-hook-form 
+  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const onSubmit = data => console.log(data);
+
 
 
   return (
     <>
-    <form className="form-customer" onSubmit={formik.handleSubmit}>
+    <form className="form-customer" onSubmit={handleSubmit()}>
       <label for="res-name" className="form-title">First name</label>
-      <input type="name" id="res-name" className="input-design" />
+      <input type="name" id="res-name" data-testid="name-input" className="input-design"
+            {...register("firstName", { required: true, maxLength: 20 })} />
       <label for="res-name" className="form-title">Last name</label>
-      <input type="name" id="res-name" className="input-design" />
+      <input type="name" id="res-name" className="input-design"
+            {...register("lastName", { pattern: /^[A-Za-z]+$/i })} />
       <label for="res-name" className="form-title">Phone number</label>
       <PhoneInput
         international
@@ -58,33 +39,39 @@ const Customer = () => {
         onChange={setValue} 
         className="form-phone"/>
       <label for="res-email" className="form-title">Email</label>
-      <input 
+      <input
         className="form-email"
         type="email"
         name="email"
         id="email"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.email} />
-          {formik.touched.email && formik.errors.email && (
-            <span>{formik.errors.email}</span>
-          )}
+          {...register("email", {
+          required: "required",
+          pattern: {
+            value: /\S+@\S+\.\S+/,
+            message: "Entered value does not match email format"
+          }
+        })} />
+        {errors.email && <span role="alert">{errors.email.message}</span>}
+
         <label for="password" className="form-title">Password</label>
 
         <input 
-          type={isShown ? "text" : "password"}
-          placeholder="Password"
-          name="password"
-          id="password"
-          className="input-design" />
+          type={isShown ? "text" : "password"} placeholder="Password"
+          name="password" id="password" className="input-design"
+          {...register("password", {
+          required: "required",
+          minLength: {
+            value: 5,
+            message: "min length is 5"
+          }
+        })} />
         <label className="check-pass" htmlFor="check-image">
           <img src={icon} alt="check password" id="check-image" onClick={togglePassword}/>
         </label>
         <label for="optional" className="form-title">Optional (Add a special request)</label>
-
-
-
-      
+        <textarea className="form-comment">
+          Optional...
+        </textarea>
       </form>
     </>
   )

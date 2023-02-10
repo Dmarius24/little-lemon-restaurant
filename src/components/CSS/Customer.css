@@ -14,7 +14,6 @@
         gap: 10px;
         grid-template-columns: auto;
         grid-template-rows: auto;
-
     }
     .form-title {
         font-size: 20px;
@@ -33,6 +32,7 @@
     }
 
     .form-phone {
+        margin-right: 15px;
         width: auto;
         height: 35px;
         border-radius: 6px;
@@ -48,18 +48,15 @@
         left: 150px;
         cursor: pointer;
     }
-
-
-    .radios {
-        display: flex;
-
-    }
-    .form-content .radio {
-        color: #F4CE14;
-        font-size: 16px;
-        font-weight: bold;
+    .form-comment {
         font-style: 'Karla';
+        background-color: #ffffff;
+        font-size: 16px;
+        border-radius: 6px;
+        height: 70px;
+        width: 200px;
     }
+
     .form-content .reserve {
         border-radius: 6px;
         font-family: 'Karla';
@@ -98,5 +95,92 @@
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
+    .form-customer {
+        background-color: #495E57;
+        text-align: center;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+    .form-title {
+        font-size: 20px;
+        font-family: 'Markazi Text';
+        color: #F4CE14;
+        font-weight: bold;
+    }
+    .input-design  {
+        font-style: 'Karla';
+        background-color: #ffffff;
+        font-size: 16px;
+        border-radius: 6px;
+        height: 35px;
+        width: 200px;
+    }
+    .form-phone {
+        margin-right: 40px;
+        width: auto;
+        height: 35px;
+        border-radius: 6px;
+    }
+    .form-email {
+        width: 150px;
+        height: 25px;
+        border-radius: 6px;
+    }
+    .check-pass {
+        position: relative;
+        bottom: 38px;
+        left: 55px;
+        cursor: pointer;
+    }
+    .form-comment {
+        margin-bottom: 30px;
+        font-style: 'Karla';
+        background-color: #ffffff;
+        font-size: 16px;
+        border-radius: 6px;
+        height: 70px;
+        width: 200px;
+    }
 
+    .form-content .reserve {
+        margin: 10px 0;
+        border-radius: 6px;
+        font-family: 'Karla';
+        font-size: 16px;
+        font-weight: bold;
+        background-color: #F4CE14;
+        border: 1px solid #F4CE14;
+        color: #000000;
+    }
+    .form-content .reserve:hover {
+                margin: 10px 0;
+        color: #F4CE14;
+        background-color: #495E57;
+        border: 2px solid #F4CE14;
+        cursor: pointer;
+        border-radius: 16px;
+}
+    .form-content .back {
+        margin: 10px 0;
+        border-radius: 6px;
+        font-family: 'Karla';
+        font-size: 16px;
+        font-weight: bold;
+        background-color: #495E57;
+        border: 1px solid #F4CE14;
+        color: #FFFFFF;
+    }
+    .form-content .back:hover {
+        margin: 10px 0;
+        border-radius: 6px;
+        font-family: 'Karla';
+        font-size: 16px;
+        font-weight: bold;
+        background-color: #F4CE14;
+        border: 1px solid #495E57;
+        color: #000000;
+        cursor: pointer;
+    }
 }
