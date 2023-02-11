@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './CSS/BookingPage.css';
 import Reserve from './Forms/Reserve';
 import Customer from './Forms/Customer';
@@ -23,10 +23,10 @@ const BookingForm = () => {
 
   return (
     <>
-    <form className="form-style" onSubmit={PageDisplay}>
+    <form className="form-style">
       <h4>{FormTitles[page]}</h4>
 
-    <main className="form-content">
+    <main className="form-content" >
       {PageDisplay()}
     </main>
             <input
