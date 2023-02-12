@@ -1,7 +1,7 @@
-import React, {useState} from 'react'
+import React from 'react'
 import './CSS/Header.css';
 import hero from "../resources/hero.jpg"
-import {useNavigate} from 'react-router-dom';
+import {useNavigate, Link} from 'react-router-dom';
 
 
 const Header = ({type}) => {
@@ -11,12 +11,10 @@ const Header = ({type}) => {
     navigate("/BookingPage")
   };
 
-  const [hidden, setHidden] = useState(false);
 
 
   return (
     <>
-    { !hidden ? 
     <header className="hero">
       <section className="hero-section">
         <hgroup className="titles">
@@ -25,15 +23,14 @@ const Header = ({type}) => {
         </hgroup>
         <p className="hero-description">We are a family owned Mediterranean restaurant, 
           focused on traditional recipes served with a modern twist.</p>
+        <Link to="/Reservations">
           <button
             className="yellow"
-            onClick={() => {handleClick();
-                            setHidden(s => !s);}}>Reserve a Table</button>
+            onClick={() => {handleClick()}}>Reserve a Table</button>
+        </Link>
         <img className="hero-image" src={hero} alt="restaurant food"/>
       </section>
     </header>
-    : null
-  }
   </>
   );
 }

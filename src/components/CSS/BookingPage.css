@@ -18,7 +18,7 @@
 
     }
         /* Style title*/
-    .form-style h4 {
+    .form-style .title-form {
         margin-top: 30px;
         font-size: 53px;
         font-style: 'Markazi Text';
@@ -26,20 +26,48 @@
         color: #FFFFFF;
     }
         /* End of style */
-    /* Form pages style container - Reserve, Customer and Payment*/
-    .form-content {
-        margin: 30px 17%;
-        text-align: left;
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        place-self: center;
-        gap: 10px;
-        border: 1px solid #F4CE14;
-        border-radius: 16px;
-        padding: 50px;
+
+
+    .form-style h4 {
+        margin-top: 30px;
+        font-size: 53px;
+        font-style: 'Markazi Text';
+        font-weight: bold;
+        color: #FFFFFF;
     }
-    /*End style container */
+
+    .form-title {
+        font-size: 20px;
+        font-family: 'Markazi Text';
+        color: #F4CE14;
+        font-weight: bold;
+    }
+
+    .input-design  {
+        font-style: 'Karla';
+        background-color: #ffffff;
+        font-size: 16px;
+        border-radius: 6px;
+        height: 35px;
+        width: 200px;
+    }
+
+    .form-email {
+        width: 200px;
+        height: 35px;
+        border-radius: 6px;
+    }
+
+    .form-comment {
+        margin-bottom: 20px;
+        font-style: 'Karla';
+        background-color: #ffffff;
+        font-size: 16px;
+        border-radius: 6px;
+        height: 70px;
+        width: 200px;
+    }
+
     /* Style for the 2 bottom buttons */
     .form-style .input-design  {
         font-style: 'Karla';
@@ -66,30 +94,88 @@
         cursor: pointer;
         border-radius: 6px;
 }
-    .form-style .back {
+
+    /*End style for the 2 buttons*/
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+        .form-style {
+        background-color: #495E57;
+        text-align: center;
+        max-width: auto 20%;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+    .form-style h4 {
+        margin-top: 30px;
+        font-size: 20px;
+        font-style: 'Markazi Text';
+        font-weight: bold;
+        color: #FFFFFF;
+    }
+
+
+
+    .form-customer {
+        background-color: #495E57;
+        text-align: center;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+    .form-title {
+        font-size: 20px;
+        font-family: 'Markazi Text';
+        color: #F4CE14;
+        font-weight: bold;
+    }
+    .input-design  {
+        font-style: 'Karla';
+        background-color: #ffffff;
+        font-size: 16px;
+        border-radius: 6px;
+        height: 35px;
+        width: 200px;
+    }
+
+    .form-email {
+        width: 150px;
+        height: 25px;
+        border-radius: 6px;
+    }
+    .check-pass {
+        position: relative;
+        bottom: 38px;
+        left: 55px;
+        cursor: pointer;
+    }
+    .form-comment {
+        margin-bottom: 20px;
+        font-style: 'Karla';
+        background-color: #ffffff;
+        font-size: 16px;
+        border-radius: 6px;
+        height: 70px;
+        width: 200px;
+    }
+
+    .reserve {
         margin-bottom: 20px;
         border-radius: 6px;
         font-family: 'Karla';
         font-size: 16px;
         font-weight: bold;
-        background-color: #495E57;
-        border: 1px solid #F4CE14;
-        color: #FFFFFF;
-        cursor: pointer;
-    }
-    .form-style .back:hover {
-        border-radius: 6px;
-        font-family: 'Karla';
-        font-size: 16px;
-        font-weight: bold;
         background-color: #F4CE14;
-        border: 1px solid #495E57;
+        border: 1px solid #F4CE14;
         color: #000000;
-        cursor: pointer;
     }
-    /*End style for the 2 buttons*/
+    .reserve:hover {
+        color: #F4CE14;
+        background-color: #495E57;
+        border: 2px solid #F4CE14;
+        cursor: pointer;
 }
-
-@media (min-width: 0px) and (max-width: 767px) {
 
 }
